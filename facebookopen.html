@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Text</title>
+  
+  <style>
+   body {
+    background-color: black;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: #06fd50;
+  }
+  #text {
+    background-color:#0000006e;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 40%;}
+      
+    
+   </style>
+</head>
+<body>
+
+<div id="text"></div>
+     </div>
+ 
+  <script>
+    const messages = [
+      "Installing Hack program........",
+      "Hacking Ashish_15 username........",
+      "Username found Ashish_15........",
+      "Connecting to Facebook........"
+    ];
+
+    let index = 0;
+    const textElement = document.getElementById("text");
+
+    function showMessage() {
+      if (index < messages.length) {
+        textElement.textContent = messages[index];
+        index++;
+        setTimeout(showMessage, 2000); // 2 seconds delay
+      }
+     else{ setTimeout(()=>{
+      
+        location.href="https://www.facebook.com/";
+      }, 2000);}
+    }
+
+async function test(){
+ await showMessage();
+await locate();
+}
+test();
+   
+  </script>
+</body>
+</html>
